@@ -40,4 +40,8 @@ rmse = np.sqrt(mean_squared_error(y_test, ensemble_predictions))
 print(f'Ensemble RMSE: {rmse}')
 
 # Optionally, you can compare the performance of individual models (RF and XGBoost) as well
-rf_rmse = np.sqrt(mean_squared_error
+rf_rmse = np.sqrt(mean_squared_error(y_test, rf_predictions))
+xgb_rmse = np.sqrt(mean_squared_error(y_test, xgb_predictions))
+
+print(f'Random Forest RMSE: {rf_rmse}')
+print(f'XGBoost RMSE: {xgb_rmse}')
